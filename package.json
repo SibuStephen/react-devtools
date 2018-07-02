@@ -2,17 +2,20 @@
   "dependencies": {
     "classnames": "^2.1.2",
     "es6-symbol": "^2.0.1",
-    "fbjs-scripts": "^0.2.0",
+    "fbjs-scripts": "^0.7.0",
     "immutable": "^3.7.4",
     "object-assign": "^3.0.0",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "snyk": "^1.88.0"
   },
   "license": "BSD-3-Clause",
   "repository": "facebook/react-devtools",
   "scripts": {
     "lint": "./node_modules/.bin/eslint .",
     "test": "node --harmony ./node_modules/.bin/jest --verbose",
-    "typecheck": "flow check"
+    "typecheck": "flow check",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
@@ -38,5 +41,6 @@
     "json-loader": "^0.5.2",
     "node-libs-browser": "^0.5.2",
     "webpack": "^1.9.10"
-  }
+  },
+  "snyk": true
 }
